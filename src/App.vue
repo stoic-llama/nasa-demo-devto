@@ -1,7 +1,7 @@
 <template>
+  <h1>Astronomy Photo of the Day (APOD)</h1>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Gallery</router-link>
   </div>
   <router-view />
 </template>
