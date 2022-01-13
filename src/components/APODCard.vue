@@ -12,34 +12,19 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import NasaServices from "@/services/NasaServices.js";
-
 export default {
-  name: "APODDetails",
+  name: "APODCard",
   props: {
-    date: {
-      type: String,
+    apod: {
+      type: Object,
       required: true,
     },
-  },
-  data() {
-    return {
-      apod: {},
-    };
-  },
-  created() {
-    NasaServices.getAPOD(this.date)
-      .then((response) => {
-        this.apod = response.data;
-      })
-      .catch((error) => console.log(error));
   },
   methods: {
     isImg() {
       const regex = new RegExp("/image/");
-      console.log(this.apod.url);
-      console.log("regex.test(this.apod.url)" + regex.test(this.apod.url));
+      // console.log(this.apod.url);
+      // console.log("regex.test(this.apod.url)" + regex.test(this.apod.url));
       if (!regex.test(this.apod.url)) {
         return false;
       }
@@ -49,23 +34,32 @@ export default {
 };
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 iframe {
-  width: 30rem;
-  height: 30rem;
+  width: 20rem;
+  height: 20rem;
 }
 img {
-  width: 30rem;
-  height: 30rem;
+  width: 20rem;
+  height: 20rem;
   object-fit: cover;
 }
-.details__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.card {
+  padding: 20px;
+  width: 20rem;
+  cursor: pointer;
+  border: 1px solid #39495c;
+  margin-bottom: 18px;
 }
-.details {
-  max-width: 40rem;
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-link {
+  color: #2c3e50;
+  text-decoration: none;
 }
 </style>

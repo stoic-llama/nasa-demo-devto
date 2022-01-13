@@ -1,11 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Gallery from "../views/Gallery.vue";
+import APODDetails from "@/views/APODDetails.vue";
 
 const routes = [
   {
     path: "/",
     name: "Gallery",
     component: Gallery,
+  },
+  {
+    path: "/apod/:date",
+    name: "APODDetails",
+    props: true,
+    component: APODDetails,
   },
 ];
 
