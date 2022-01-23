@@ -23,4 +23,4 @@ See the steps [here](https://dev.to/stoicllama/build-a-simple-vue-3-app-and-enjo
 
 Thanks for NASA for providing the free service for curious astronomer-wanne-be's who also like coding.  This post was also inspired by the [VueMastery](https://www.vuemastery.com) course named "Real World Vue" that I highly recommend - no affliation here just a big fan of good educational content.
 
-Any quesitons on this tutorial please post an issue here and I will do my best to answer you or direct you to right resources. Good luck and have fun building!
+Any questions on this tutorial please post an issue here and I will do my best to answer you or direct you to right resources. Good luck and have fun building!
